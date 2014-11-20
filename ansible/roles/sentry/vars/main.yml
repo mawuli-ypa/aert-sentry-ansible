@@ -1,6 +1,7 @@
 ---
 # app
 prefix      : /srv
+app_name    : "sentry"
 app_home    : "{{ prefix }}/sentry"
 app_env     : "{{ app_home }}/env"
 app_public  : "{{ app_home }}/public"
@@ -9,6 +10,13 @@ app_log     : "/var/log/nginx/sentry"
 tmp_path    : "{{ prefix }}/tmp"
 app_user    : www-data
 app_group   : www-data
+app_hostname: "logs.goldkeys.net"
+email_backend: 'django.core.mail.backends.smtp.emailbackend'
+email_host: 'localhost'
+email_host_password: ''
+email_host_user: ''
+email_port: 25
+email_use_tls: False
 
 # pgsql
 dbname     : sentry

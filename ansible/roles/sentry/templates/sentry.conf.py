@@ -1,4 +1,3 @@
-
 # This file is just Python, with a touch of Django which means you
 # you can inherit and tweak settings to your hearts content.
 from sentry.conf.server import *
@@ -104,10 +103,10 @@ SENTRY_WEB_OPTIONS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'localhost'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_HOST_USER = ''
-EMAIL_PORT = 25
-EMAIL_USE_TLS = False
+EMAIL_HOST_PASSWORD = '{{email_host_password}}'
+EMAIL_HOST_USER = '{{email_host_user}}'
+EMAIL_PORT = "{{email_host}}"
+EMAIL_USE_TLS = {{email_use_tls}}
 
 # The email address to send on behalf of
 SERVER_EMAIL = 'sentry@{{app_hostname}}'
