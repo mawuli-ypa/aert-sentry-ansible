@@ -7,13 +7,13 @@ INSTALLER_PATH = File.join(File.dirname(__FILE__), "build", "setup_sentry-" + IN
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "hashicorp/precise64"
 
   # Network
   config.vm.network :private_network, ip: "192.168.55.99"
   config.vm.hostname = "sentry.vagrant.local"
   config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
-  config.vm.network :forwarded_port, guest: 5432, host: 5432
+  config.vm.network :forwarded_port, guest: 5433, host: 5433
 
   # Provision
   config.vm.provision "ansible" do |ansible|
