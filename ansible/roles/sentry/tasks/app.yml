@@ -25,7 +25,7 @@
   sudo_user: "{{ app_user }}"
   sudo: yes
 
-# Config 
+# Config
 - name: sentry-conf_app_dirs
   file: path={{ item }} state=directory owner={{ app_user }} group={{ app_group }} recurse=yes
   with_items:

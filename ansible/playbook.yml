@@ -5,10 +5,9 @@
   gather_facts: False
   sudo: no
   vars:
-    #installer_local : 
+    #installer_local :
   roles:
     - common
     - nginx
     - pgsql
     - sentry
-

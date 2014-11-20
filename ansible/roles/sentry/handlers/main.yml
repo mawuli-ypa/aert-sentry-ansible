@@ -6,3 +6,6 @@
 - name: uwsgi started
   service: name=uwsgi state=started
   sudo: yes
+
+- name: reload supervisord configs
+  command: supervisorctl update
