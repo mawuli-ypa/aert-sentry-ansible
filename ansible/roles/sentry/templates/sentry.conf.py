@@ -6,6 +6,8 @@ import os.path
 
 CONF_ROOT = os.path.dirname(__file__)
 
+ALLOWED_HOSTS = ['*',]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
