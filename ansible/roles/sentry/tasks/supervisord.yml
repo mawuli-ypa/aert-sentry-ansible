@@ -1,0 +1,13 @@
+---
+
+- name: install supervisor
+  apt: pkg=supervisor state=installed
+  sudo: yes
+
+- name: copy the supervisord config
+  template: src=sentry.supervisord.conf \
+       dest="/etc/supervisor/conf.d/supervisord.{{ app_name }}.conf" \
+       owner="{{ app_user }}" group="{{ app_group }}"
+  sudo: yes
+  notify:
+    - reload supervisord configs
