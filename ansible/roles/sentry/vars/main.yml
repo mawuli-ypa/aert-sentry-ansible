@@ -10,7 +10,7 @@ app_log     : "/var/log/nginx/sentry"
 tmp_path    : "{{ prefix }}/tmp"
 app_user    : www-data
 app_group   : www-data
-app_hostname: "logs.goldkeys.net"
+app_hostname: "logger-212.prod.goldkeys.net"
 email_backend: 'django.core.mail.backends.smtp.emailbackend'
 email_host: 'localhost'
 email_host_password: ''
